@@ -1,0 +1,90 @@
+
+(rules PCB MOS6581Board
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 6287)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.2)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.8)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.2)
+    (clear 125.0 (type smd_to_turn_gap))
+    (clear 50.0 (type smd_smd))
+  )
+  (padstack "Via[0-1]_600:400_um"
+    (shape
+      (circle F.Cu 600.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 600.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_600:400_um" "Via[0-1]_600:400_um" default
+  )
+  (via 
+    "Via[0-1]_600:400_um-kicad_default" "Via[0-1]_600:400_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_600:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_600:400_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    "Net-(C1-Pad1)" /CAP1A /CAP1B /CAP2A /CAP2B /POTX /POTY /EXTIN
+    /~RES /A0 /A1 /A2 /A3 /A4 /D0 /D1
+    /D2 /D3 /D4 /D5 /D6 /D7 /~RW /~CS
+    GND +12V +5V /CLOCK "/AUDIO_OUT" "/AUDIO_IN" +5VA "Net-(C17-Pad1)"
+    "Net-(C18-Pad1)" "Net-(C20-Pad1)" "Net-(D1-Pad2)" "Net-(D2-Pad1)" "/MIDI_IN_C" "Net-(D3-Pad2)" "/DEBUG_UART_RX" "/DEBUG_UART_TX"
+    "/MIDI_IN_A" /TCK /TDO /TMS "Net-(J5-Pad7)" "Net-(J5-Pad8)" /TDI /SCL
+    /SDA /PF0 /PF1 /PF2 /PF3 "/DEBUG_LED" "Net-(R5-Pad2)" "/MIDI_UART_RX"
+    "Net-(R8-Pad1)" "Net-(U3-Pad1)" "Net-(U3-Pad4)" "Net-(U4-Pad4)" "Net-(U4-Pad6)" "Net-(U4-Pad7)" "Net-(U4-Pad8)" "Net-(U4-Pad9)"
+    "Net-(U4-Pad12)" "Net-(U4-Pad13)" "Net-(U4-Pad14)" "Net-(U4-Pad15)" "Net-(U4-Pad16)" "Net-(U4-Pad17)" "Net-(U4-Pad18)" "Net-(U4-Pad19)"
+    "Net-(U4-Pad20)" "Net-(U4-Pad21)" "Net-(U4-Pad22)" "Net-(U4-Pad23)" "Net-(U4-Pad24)" "Net-(U4-Pad25)" "Net-(U4-Pad26)" "Net-(U4-Pad27)"
+    "Net-(U4-Pad28)" "Net-(U4-Pad29)" "Net-(U4-Pad35)" "Net-(U4-Pad36)" "Net-(U4-Pad37)" "Net-(U4-Pad38)" "Net-(U4-Pad39)" "Net-(U4-Pad40)"
+    "Net-(U4-Pad41)" "Net-(U4-Pad42)" "Net-(U4-Pad45)" "Net-(U4-Pad46)" "Net-(U4-Pad47)" "Net-(U4-Pad48)" "Net-(U4-Pad49)" "Net-(U4-Pad50)"
+    "Net-(U4-Pad51)" "Net-(U4-Pad52)" "Net-(U4-Pad58)" "Net-(U4-Pad59)" "Net-(U4-Pad60)" "Net-(U4-Pad64)" "Net-(U4-Pad65)" "Net-(U4-Pad66)"
+    "Net-(U4-Pad67)" "Net-(U4-Pad68)" "Net-(U4-Pad69)" "Net-(U4-Pad70)" "Net-(U4-Pad82)" "Net-(U4-Pad83)" "Net-(U4-Pad84)" "Net-(U4-Pad85)"
+    "Net-(U4-Pad86)" "Net-(U4-Pad87)" "Net-(U4-Pad88)" "Net-(U4-Pad89)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
