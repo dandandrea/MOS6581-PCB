@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:MOS6581Board-rescue
 LIBS:power
 LIBS:device
 LIBS:switches
@@ -1491,5 +1490,16 @@ F 3 "" H 6800 6200 50  0001 C CNN
 F 4 "23PS147" H 6800 6200 60  0001 C CNN "VPN"
 	1    6800 6200
 	0    1    1    0   
+$EndComp
+$Comp
+L TCA9544A U?
+U 1 1 5C299205
+P 8800 6375
+F 0 "U?" H 8600 7175 50  0000 L CNN
+F 1 "TCA9544A" H 8900 7175 50  0000 L CNN
+F 2 "Housings_SSOP:TSSOP-20_4.4x6.5mm_Pitch0.65mm" H 9800 5475 50  0001 C CNN
+F 3 "" H 8850 6625 50  0000 C CNN
+	1    8800 6375
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
